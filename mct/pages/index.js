@@ -26,7 +26,7 @@ const Home = ({data}) => {
     let newDate = currentDate.subtract(1, 'day').format('YYYY-MM-DDTHH:mm:ss')
     const res = await fetch('http://localhost:3000/api/daily?date=' + newDate)
     const json = await res.json()
-    
+
     setResults(json);
   }
 
@@ -35,7 +35,7 @@ const Home = ({data}) => {
     let newDate = currentDate.add(1, 'day').format('YYYY-MM-DDTHH:mm:ss')
     const res = await fetch('http://localhost:3000/api/daily?date=' + newDate)
     const json = await res.json()
-    
+
     setResults(json);
   }
 
@@ -60,10 +60,10 @@ const Home = ({data}) => {
 
       <div className="flex text-center">
         <div className="w-full m-4">
-          <h1 className="text-4xl">Macro Compliance Tracker</h1>
+          <h1 className="text-4xl">Munch: Macro Nutrient Tracker</h1>
         </div>
       </div>
-      
+
       <div className="flex text-center">
         <div className="w-1/3 bg-gray-200 p-4"><button onClick={getDataForPreviousDay}>Previous Day</button></div>
         <div className="w-1/3 p-4">{dayjs(results.date).format('MM/DD/YYYY')}</div>
