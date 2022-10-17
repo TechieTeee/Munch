@@ -4,7 +4,6 @@ App allows you to track your calories and macros, as well as acceptable ranges t
 ## Tools
 NextJS + MongoDB
 
-![MCT App](./article/images/mct-app.png)
 
 ## Prerequisites
 
